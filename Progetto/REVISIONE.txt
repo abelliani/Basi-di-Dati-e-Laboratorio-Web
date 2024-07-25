@@ -1,0 +1,7 @@
+- Ottimizzare chiamate Ajax
+- Rendere responsive
+- Aggiungere trigger per impedire eliminazione categoria principale del blog
+
+
+visualizzazione commenti:
+Aggiungere chiamata ajax per richiamare visualizza commenti appena viene aggiunto un commento
