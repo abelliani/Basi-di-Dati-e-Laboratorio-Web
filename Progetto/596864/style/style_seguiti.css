@@ -1,0 +1,72 @@
+.follower-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    margin-right: 20px;
+}
+.follower-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.view-profile-button {
+    margin-left: 10px;
+    padding: 2px 8px;
+    background: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid #47704b;
+    position: relative;
+}
+
+.view-profile-button:hover {
+    background-color: rgb(57,57,57);
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -490px;
+}
+.pagination a {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.back-link {
+    text-align: center;
+    margin-top: 595px;
+    margin-left: -315px
+}
+.back-link a {
+    color: #47704b;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.back-link a:hover {
+    text-decoration: underline;
+}
