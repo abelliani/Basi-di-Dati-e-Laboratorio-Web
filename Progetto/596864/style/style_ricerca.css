@@ -1,0 +1,88 @@
+/* Stili per la ricerca */
+.search-box {
+    max-width: 90%; /* Adatta la larghezza al 90% dello schermo */
+    width: 100%; /* Permette alla ricerca di adattarsi alla larghezza del contenitore */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+}
+
+.cerca {
+    width: 100%; /* Adatta il pulsante alla larghezza del contenitore */
+    height: 45px;
+    background: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none; /* Rimuove il bordo di default */
+    margin-top: 10px; /* Aggiungi uno spazio sopra il pulsante */
+}
+
+.cerca:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+/* Stili per i messaggi di errore e successo */
+.error, #error-message {
+    color: red;
+    margin-top: 5px;
+    display: block;
+    font-size: 0.875em; /* Ridotto per schermi più piccoli */
+}
+
+.success {
+    color: green;
+    font-size: 0.875em; /* Ridotto per schermi più piccoli */
+}
+
+/* Stili per gli elementi di autocompletamento */
+.autocomplete-item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Stili per i risultati della ricerca */
+#user_search_results, #blog_search_results, #post_search_results {
+    position: absolute;
+    overflow: auto;
+    max-height: 200px; /* Aumenta l'altezza massima per una visualizzazione più comoda */
+    width: calc(100% - 20px); /* Riduce la larghezza per il padding */
+    box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+}
+
+/* Media Queries per schermi più piccoli */
+@media (max-width: 768px) {
+    .search-box {
+        max-width: 95%; /* Riduci la larghezza su schermi più piccoli */
+    }
+
+    .cerca {
+        font-size: 0.9em; /* Riduci la dimensione del font per dispositivi più piccoli */
+    }
+
+    #user_search_results, #blog_search_results, #post_search_results {
+        max-height: 150px; /* Riduci l'altezza massima su schermi più piccoli */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        padding: 15px; /* Riduci il padding su schermi molto piccoli */
+    }
+
+    .cerca {
+        font-size: 0.8em; /* Ulteriore riduzione della dimensione del font per smartphone */
+    }
+
+    #user_search_results, #blog_search_results, #post_search_results {
+        max-height: 120px; /* Ulteriore riduzione dell'altezza massima */
+    }
+}

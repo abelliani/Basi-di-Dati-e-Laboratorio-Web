@@ -1,0 +1,122 @@
+/* Stili Generali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3;
+}
+
+main {
+    width: 100%;
+    height: auto; /* Adatta l'altezza in base al contenuto */
+    margin: 2% 0; /* Margini superiori e inferiori uniformi */
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; /* Padding orizzontale per evitare che il contenuto tocchi i bordi */
+}
+
+/* Tabelle */
+table {
+    width: 50%; /* Utilizza tutta la larghezza disponibile */
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Spazio sotto la tabella */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #47704b;
+    color: white;
+}
+
+/* Messaggi di errore e successo */
+.error {
+    color: red;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+}
+
+.success {
+    color: green;
+    font-size: 15px;
+}
+
+/* Pulsanti */
+.delete-button {
+    margin-left: 10px;
+    padding: 6px 12px; /* Maggiore padding per il pulsante */
+    background: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none; /* Rimuove il bordo predefinito */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+.delete-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+/* Contenitore */
+.container {
+    max-width: 1200px; /* Limita la larghezza su schermi più grandi */
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px; /* Spazio sopra il contenuto */
+}
+
+/* Titoli e Separatori */
+h3 {
+    margin-left: 0; /* Rimuove il margine negativo */
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-left: 0; /* Rimuove il margine negativo */
+    margin-bottom: 20px; /* Aggiunge spazio sotto il separatore */
+}
+
+/* Media Queries per migliorare la responsività */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%; /* Adatta la larghezza su tablet */
+    }
+
+    table {
+        font-size: 14px; /* Riduce la dimensione del testo nella tabella per tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 2% 0; /* Riduce i margini per tablet */
+        padding: 0 20px; /* Aumenta il padding orizzontale per dispositivi più piccoli */
+    }
+
+    .container {
+        width: 100%; /* Utilizza tutta la larghezza disponibile per schermi più piccoli */
+    }
+
+    table {
+        font-size: 12px; /* Riduce ulteriormente la dimensione del testo nella tabella per smartphone */
+    }
+}
+
+@media (max-width: 480px) {
+    .delete-button {
+        font-size: 0.9em; /* Riduce la dimensione del font per smartphone */
+        padding: 4px 8px; /* Riduce il padding per smartphone */
+    }
+
+    table {
+        font-size: 10px; /* Riduce la dimensione del testo nella tabella per smartphone */
+    }
+}

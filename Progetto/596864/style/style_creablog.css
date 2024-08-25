@@ -1,0 +1,82 @@
+#descrizione {
+    width: 100%;
+    max-width: 310px;
+    margin: 20px 0;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+}
+
+.success {
+    color: green;
+    font-size: 15px;
+}
+
+#categoria, #sottocategoria {
+    overflow-y: auto;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #47704b;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Per gestire meglio il contenuto su schermi piccoli */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3;
+    min-height: 100vh; /* per assicurare che il body occupi tutta l'altezza */
+}
+
+/* Media Queries per migliorare la responsività */
+@media (max-width: 768px) {
+    #descrizione {
+        width: 100%;
+    }
+
+    .back-link a {
+        font-size: 1em; /* Ridotto il font per tablet */
+    }
+
+    main {
+        margin-top: 10%; /* Aumenta lo spazio superiore su tablet */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-link a {
+        font-size: 0.9em; /* Font ancora più piccolo per smartphone */
+    }
+
+    main {
+        margin-top: 15%; /* Aumenta ulteriormente lo spazio superiore su smartphone */
+        padding: 10px;
+    }
+}

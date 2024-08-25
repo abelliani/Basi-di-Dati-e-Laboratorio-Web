@@ -1,0 +1,351 @@
+/* Stili Generali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3;
+}
+
+/* Contenitore Principale */
+main {
+    width: 100%;
+    height: auto; /* Adatta l'altezza in base al contenuto */
+    margin: 5% 0; /* Margini superiori e inferiori uniformi */
+    padding: 0 10px; /* Padding orizzontale per evitare che il contenuto tocchi i bordi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenitore del Contenuto */
+.container {
+    width: 80%;
+    max-width: 1200px; /* Limita la larghezza su schermi più grandi */
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+}
+
+/* Intestazione e Separatori */
+h3 {
+    margin: 0; /* Rimuove il margine negativo */
+    margin-bottom: 20px;
+}
+
+hr {
+    margin: 20px 0; /* Margini superiori e inferiori uniformi */
+}
+
+/* Pagina di Navigazione */
+.pagination a {
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Post e Immagini */
+.post-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #4CAF50;
+    margin-right: 10px;
+}
+
+#post-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#post-description, #post-commento {
+    background-color: #fff6e6;
+    border: 1px solid #4CAF50; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+/* Pulsanti */
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.edit-button, .delete-button {
+    margin-left: 10px;
+    padding: 6px 12px; /* Maggiore padding per i pulsanti */
+    background-color: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+/* Tabelle */
+table {
+    width: 100%; /* Utilizza tutta la larghezza disponibile */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #47704b;
+    color: white;
+}
+
+/* Statistiche */
+.stats-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+.stat-box {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.stat-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.stat-box h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-box p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Commenti */
+.comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    padding-left: 60px; 
+    word-wrap: break-word;
+}
+
+.username-date {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pulsanti Like/Unlike e Mostra/Nascondi Commenti */
+.like-button, .unlike-button, .show-comments-button, .hide-comments-button {
+    padding: 6px 12px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.like-button {
+    background: #47704b;
+    color: white;
+    border-bottom: 2px solid #47704b;
+    margin-top: 20px; /* Adatta il margine per il posizionamento */
+}
+
+.like-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+.unlike-button {
+    background: rgb(57, 57, 57);
+    color: white;
+    border-bottom: 2px solid rgb(57, 57, 57);
+    margin-top: 20px; /* Adatta il margine per il posizionamento */
+}
+
+.unlike-button:hover {
+    background-color: #47704b;
+}
+
+.show-comments-button {
+    background-color: #47704b;
+    color: #fff6e6;
+    border-bottom: 2px solid #47704b;
+    margin-top: 20px; /* Adatta il margine per il posizionamento */
+}
+
+/* Immagini rotonde */
+.round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    margin-right: 10px;
+}
+
+/* Pulsanti per mostrare/nascondere i commenti */
+.show-comments-button, .hide-comments-button {
+    padding: 6px 12px;
+    background-color: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid #47704b;
+    transition: background-color 0.3s ease;
+    margin: 10px; /* Spazio tra i pulsanti */
+}
+
+.hide-comments-button {
+    background: rgb(57, 57, 57);
+}
+
+.show-comments-button:hover, .hide-comments-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+.hide-comments-button:hover {
+    background-color: #47704b;
+}
+
+/* Commenti */
+.comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    padding-left: 10px; /* Spazio tra l'immagine e il testo */
+    word-wrap: break-word;
+}
+
+.username-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #47704b;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Queries per migliorare la responsività */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adatta la larghezza su tablet */
+    }
+
+    table {
+        font-size: 14px; /* Riduce la dimensione del testo nella tabella per tablet */
+    }
+
+    .pagination a {
+        font-size: 14px; /* Riduce la dimensione del testo per tablet */
+    }
+
+    .post-header, .post-info {
+        flex-direction: column; /* Imposta il layout in colonna per dispositivi più piccoli */
+    }
+
+    #post-title {
+        width: 100%; /* Adatta la larghezza del titolo su schermi più piccoli */
+        text-align: left; /* Allinea il testo a sinistra */
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-button, .delete-button, .like-button, .unlike-button, .show-comments-button, .hide-comments-button {
+        font-size: 0.9em; /* Riduce la dimensione del font per smartphone */
+        padding: 4px 8px; /* Riduce il padding per smartphone */
+    }
+
+    .container {
+        width: 100%; /* Utilizza tutta la larghezza disponibile per schermi più piccoli */
+    }
+
+    table {
+        font-size: 12px; /* Riduce ulteriormente la dimensione del testo nella tabella per smartphone */
+    }
+
+    .pagination a {
+        font-size: 12px; /* Riduce la dimensione del testo per smartphone */
+    }
+}

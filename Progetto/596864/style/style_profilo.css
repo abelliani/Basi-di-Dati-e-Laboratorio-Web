@@ -1,0 +1,203 @@
+/* Stili generali per il body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3;
+    min-height: 100vh; /* Assicurati che il body occupi tutta l'altezza della viewport */
+}
+
+/* Stili principali per il main */
+main {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    margin: 0 0; /* Margini superiori e inferiori */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stili per il contenitore */
+.container {
+    width: 90%; /* Aumenta la larghezza per schermi più piccoli */
+    max-width: 1200px; /* Limita la larghezza massima per schermi più grandi */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza */
+}
+
+/* Stili per intestazioni e separatori */
+h3, hr {
+    margin: 0 auto 20px;
+    text-align: center; /* Centratura delle intestazioni */
+}
+
+/* Profilo e immagine rotonda */
+.profile-header {
+    display: flex;
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.round-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Stili per le informazioni del profilo */
+#username-info {
+    font-size: 1.5em; /* Maggiore per visibilità */
+    font-weight: bold;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.stat-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.stat-box h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-box p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+
+/* Stili per i pulsanti */
+.edit-button, .delete-button {
+    margin-left: 10px;
+    padding: 6px 12px; /* Maggiore spazio per una migliore usabilità */
+    background: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid #47704b;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+/* Stili per la tabella */
+table {
+    width: 100%; /* Larghezza completa del contenitore */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #47704b;
+    color: white;
+}
+
+/* Stili per i pulsanti di like e commento */
+.like-button, .unlike-button, .show-comments-button, .hide-comments-button {
+    padding: 6px 12px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.like-button {
+    background: #47704b;
+    color: white;
+    border-bottom: 2px solid #47704b;
+}
+
+.unlike-button {
+    background: rgb(57, 57, 57);
+    color: white;
+    border-bottom: 2px solid rgb(57, 57, 57);
+}
+
+.show-comments-button {
+    background-color: #47704b;
+    color: #fff6e6;
+    border-bottom: 2px solid #47704b;
+}
+
+.hide-comments-button {
+    background: rgb(57, 57, 57);
+}
+
+/* Media Queries per schermi più piccoli */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .profile-header {
+        flex-direction: column; /* Layout verticale su schermi più piccoli */
+    }
+
+    .stats-container {
+        flex-direction: column; /* Imposta una direzione verticale per le statistiche */
+    }
+
+    table {
+        width: 30%; /* Aumenta la larghezza della tabella per schermi più piccoli */
+    }
+
+    .round-image {
+        width: 120px; /* Ridotto per schermi più piccoli */
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        align-items: center;
+    }
+
+    table {
+        width: 30%; /* Aumenta la larghezza della tabella per schermi più piccoli */
+    }
+    
+    .stat-box {
+        flex: 1 1 100%; /* Ogni box occupa l'intera larghezza */
+    }
+
+    .edit-button, .delete-button {
+        padding: 4px 8px; /* Ridotto padding per schermi più piccoli */
+    }
+
+    .round-image {
+        width: 100px; /* Ancora più piccolo per smartphone */
+        height: 100px;
+    }
+}

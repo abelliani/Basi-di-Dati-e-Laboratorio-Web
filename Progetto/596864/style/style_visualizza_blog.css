@@ -1,0 +1,204 @@
+/* Stili principali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3;
+}
+
+main {
+    width: 100%;
+    height: auto; /* Altezza automatica per adattarsi al contenuto */
+    margin: 5% auto;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.container {
+    width: 90%; /* Adattato per schermi più piccoli */
+    max-width: 1200px; /* Massima larghezza per una visualizzazione ottimale */
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin: 20px 0; /* Margini per separare il contenuto */
+}
+
+/* Stili per l'intestazione del blog */
+.blog-header {
+    display: flex;
+    align-items: center; /* Centra gli elementi */
+    text-align: center;
+}
+
+.blog-image {
+    width: 100%;
+    max-width: 300px; /* Larghezza massima per mantenere la proporzione */
+    height: auto; /* Altezza automatica per adattarsi alla larghezza */
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    margin-bottom: 10px;
+}
+
+#blog-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#blog-description {
+    background-color: #fff6e6;
+    border: 1px solid #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Contenitore dei pulsanti */
+.buttons-container {
+    display: flex;
+    flex-direction: row; /* Modificato per una disposizione migliore su schermi più piccoli */
+    align-items: center;
+    justify-content: end;
+    margin-top: 10px; /* Spazio sopra i pulsanti */
+}
+
+.edit-button, .delete-button, .delete-image-button, .follow-button, .unfollow-button {
+    padding: 6px 12px;
+    background-color: #47704b;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid #47704b;
+    margin: 5px; /* Spazio tra i pulsanti */
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover, .delete-button:hover, .delete-image-button:hover, .follow-button:hover, .unfollow-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+.unfollow-button {
+    background: rgb(57, 57, 57);
+    border-bottom: 2px solid rgb(57, 57, 57);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.stat-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.stat-box h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-box p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Stili per il link di ritorno */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #47704b;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: text-decoration 0.3s ease;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Stili per le tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #47704b;
+    color: white;
+}
+
+/* Media Queries per la responsività */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .blog-header {
+        flex-direction: column;
+    }
+
+    .blog-image {
+        max-width: 100%;
+    }
+
+    #blog-title, #blog-description {
+        max-width: 100%;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 10px 0; /* Maggiore spazio verticale tra i box */
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-button, .delete-button, .delete-image-button, .follow-button, .unfollow-button {
+        font-size: 0.9em;
+        padding: 4px 8px;
+    }
+
+    .stat-box h4 {
+        font-size: 1em;
+    }
+
+    .stat-box p {
+        font-size: 1em;
+    }
+}

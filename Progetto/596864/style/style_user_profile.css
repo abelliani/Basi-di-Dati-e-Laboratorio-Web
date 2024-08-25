@@ -1,0 +1,184 @@
+/* Stili generali per il body e main */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3;
+    min-height: 80vh;
+}
+
+main {
+    width: 100%;
+    padding: 5% 0; /* Margine verticale di 5% */
+}
+
+.container {
+    width: 90%; /* Aumentato il width per una visualizzazione più ampia su schermi grandi */
+    max-width: 1200px; /* Imposta un max-width per evitare che la larghezza superi 1200px */
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Stili per titoli e linee */
+h3 {
+    margin: 20px 0; /* Margini verticali per una separazione visibile */
+}
+
+hr {
+    margin: 20px 0;
+}
+
+/* Stili per la sezione del profilo */
+.profile-header {
+    display: flex;
+    flex-wrap: wrap; /* Consente di adattare gli elementi su più righe su schermi più piccoli */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stili per l'immagine del profilo */
+.round-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Stili per il nome utente */
+#username-info {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.stat-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.stat-box h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-box p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Stili per i pulsanti di modifica e follow/unfollow */
+.edit-button, .follow-button, .unfollow-button {
+    padding: 2px 8px;
+    color: #fff6e6;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button {
+    background: #47704b;
+    border-bottom-color: #47704b;
+}
+
+.edit-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+.follow-button {
+    background: #47704b;
+    border-bottom-color: #47704b;
+    margin: 10px; /* Ridotto il margine per adattarsi meglio su schermi piccoli */
+}
+
+.unfollow-button {
+    background: rgb(57, 57, 57);
+    border-bottom-color: rgb(57, 57, 57);
+    margin: 10px; /* Ridotto il margine per adattarsi meglio su schermi piccoli */
+}
+
+.follow-button:hover, .unfollow-button:hover {
+    background-color: rgb(57, 57, 57);
+}
+
+.unfollow-button:hover {
+    background-color: #47704b;
+}
+
+/* Stili per le tabelle */
+table {
+    width: 100%; /* Adatta la larghezza della tabella al contenitore */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #47704b;
+    color: white;
+}
+
+/* Media Queries per migliorare la responsività */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Adatta la larghezza della container su schermi molto piccoli */
+        padding: 10px; /* Riduci il padding su schermi piccoli */
+    }
+
+    .round-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .stat-box {
+        flex: 1 1 100%; /* Adatta il box delle statistiche per occupare tutta la larghezza su schermi piccoli */
+        margin: 10px 0; /* Margine verticale per migliorare l'aspetto su schermi piccoli */
+    }
+
+    .view-profile-button, .follow-button, .unfollow-button {
+        padding: 8px 12px; /* Riduci il padding dei pulsanti su schermi piccoli */
+        font-size: 0.9em; /* Riduci la dimensione del font su schermi piccoli */
+    }
+}

@@ -1,0 +1,82 @@
+main {
+    width: 100%;
+    height: calc(100vh - 40px); /* L'altezza è calcolata in base alla viewport meno 40px */
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e3; /* Colore di sfondo della pagina */
+    min-height: 80vh !important; /* Assicura che il body occupi almeno l'80% dell'altezza della viewport */
+}
+
+#testo {
+    width: 310px; /* Larghezza fissa del contenuto con ID "testo" */
+    margin: 20px 0; /* Margine verticale */
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px; /* Dimensione del font per i messaggi di errore */
+}
+
+.success {
+    color: green;
+    font-size: 15px; /* Dimensione del font per i messaggi di successo */
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px; /* Margine superiore per il link di ritorno */
+}
+
+.back-link a {
+    color: #47704b; /* Colore del link */
+    text-decoration: none;
+    font-size: 1.2em; /* Dimensione del font del link */
+    font-weight: bold; /* Grassetto */
+}
+
+.back-link a:hover {
+    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+}
+/* Media Queries per migliorare la responsività */
+@media (max-width: 768px) {
+    main {
+        margin-top: 10%; /* Aumenta lo spazio superiore su tablet */
+        margin-bottom: 10%;
+        padding: 15px; /* Aggiunge un po' di padding per evitare che il contenuto tocchi i bordi */
+    }
+
+    #testo {
+        width: 100%; /* Imposta la larghezza al 100% per schermi più piccoli */
+        max-width: 300px; /* Imposta una larghezza massima per evitare che diventi troppo largo */
+    }
+
+    .back-link a {
+        font-size: 1em; /* Riduce la dimensione del font per tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 15%; /* Aumenta ulteriormente lo spazio superiore su smartphone */
+        margin-bottom: 15%;
+        padding: 10px;
+    }
+
+    #testo {
+        width: 100%; /* Imposta la larghezza al 100% per smartphone */
+        max-width: 280px; /* Riduce la larghezza massima per schermi molto piccoli */
+    }
+
+    .back-link a {
+        font-size: 0.9em; /* Riduce ulteriormente la dimensione del font per smartphone */
+    }
+}
